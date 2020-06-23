@@ -19,14 +19,16 @@
 			<li><a href="#User_Input">User Input</a></li>
 			<li><a href="#Data_Types">Data Types</a></li>
 			<li><a href="#Conditions">Conditions</a></li>
-		  <li><a href="#For_Loop">For Loop</a></li>
+			<li><a href="#For_Loop">For Loop</a></li>
 		</ul>
-
 	</nav>
+
 	<main id="main-doc">
 
 		<section class="main-section" id="Introduction">
-					<p> As I have previous experience in C++, I decided to base the Technical Documentation page on that; just to be different! The information is taken directly from <a href="https://www.w3schools.com/cpp/default.asp" target="_blank"> w3schools.com</a></p>
+			<p> As I have previous experience in C++, I decided to base the Technical Documentation page on that; just to be different! The information is taken directly from <a href="https://www.w3schools.com/cpp/default.asp" target="_blank">
+					w3schools.com</a></p>
+
 			<header>Introduction</header>
 			<h1>What is C++?</h1>
 			<ul>
@@ -58,116 +60,119 @@
 
 		<section class="main-section" id="Get_Going">
 			<header>Get Going with C++!</header>
-		<p>To start using C++, you need two things:</p>
-<ol>
-	<li>A text editor, like Notepad, to write C++ code</li>
-<li>A compiler, like GCC, to translate the C++ code into a language that the computer will understand</li>
+			<p>To start using C++, you need two things:</p>
+			<ol>
+				<li>A text editor, like Notepad, to write C++ code</li>
+				<li>A compiler, like GCC, to translate the C++ code into a language that the computer will understand</li>
+			</ol>
 
-</ol>
+			<p>There are many text editors and compilers to choose from. In this tutorial, we will use an IDE (see below).</p>
 
-<p>There are many text editors and compilers to choose from. In this tutorial, we will use an IDE (see below).</p>
+			<h1 id="Install">C++ Install IDE</h1>
+			<p>An IDE (Integrated Development Environment) is used to edit AND compile the code.
+				Popular IDE's include Code::Blocks, Eclipse, and Visual Studio. These are all free, and they can be used to both edit and debug C++ code.</p>
+			<p><strong>Note: </strong> Web-based IDE's can work as well, but functionality is limited.</p>
+			<p>We will use <strong>Code::Blocks</strong> in our tutorial, which we believe is a good place to start.</p>
 
-<h1 id="Install">C++ Install IDE</h1>
-<p>An IDE (Integrated Development Environment) is used to edit AND compile the code.
-Popular IDE's include Code::Blocks, Eclipse, and Visual Studio. These are all free, and they can be used to both edit and debug C++ code.</p>
-<p><strong>Note: </strong> Web-based IDE's can work as well, but functionality is limited.</p>
-<p>We will use <strong>Code::Blocks</strong> in our tutorial, which we believe is a good place to start. <p>
+			<h1 id="Quickstart">C++ Quickstart</h1>
+			<p>Let's create our first C++ file.</p>
+			<p>Open Codeblocks and go to <strong>File > New > Empty File.</strong></p>
 
-<h1 id="Quickstart">C++ Quickstart</h1>
-<p>Let's create our first C++ file.</p>
-<p>Open Codeblocks and go to <strong>File > New > Empty File.</strong></p>
+			<p>Write the following C++ code and save the file as <code>myfirstprogram.cpp </code><strong>(File > Save File as):</strong></p>
 
-<p>Write the following C++ code and save the file as <code>myfirstprogram.cpp </code><strong>(File > Save File as):</strong></p>
+			<h2 id="First_Program">myfirstprogram.cpp</h2>
 
-<h2 id="First_Program">myfirstprogram.cpp</h2>
-<code>#include &ltiostream&gt
-using namespace std;
-int main() {
-  cout << "Hello World!";
-  return 0;
-}</code>
+			<div class="divcode"><code>#include &ltiostream&gt
+					using namespace std;
+					int main() {
+					cout << "Hello World!" ; return 0; }</code>
+			</div>
 
-<p>Then, go to <strong>Build > Build and Run</strong> to run (execute) the program. The result will look something to this:</p>
-
-<code>Hello World!
-Process returned 0 (0x0) execution time : 0.011 s
-Press any key to continue.</code>
-<p>Congratulations! You have now written and executed your first C++ program.</p>
+			<p>Then, go to <strong>Build > Build and Run</strong> to run (execute) the program. The result will look something to this:</p>
+			<div class="divcode">
+				<code>Hello World!
+					Process returned 0 (0x0) execution time : 0.011 s
+					Press any key to continue.</code></div>
+			<p>Congratulations! You have now written and executed your first C++ program.</p>
 
 		</section>
 
 		<section class="main-section" id="Variables">
 			<header>Variables</header>
 			<p>Variables are containers for storing data values. In C++, there are different types of variables (defined with different keywords), for example:</p>
-<ul>
-<li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
-<li><code>double</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
-<li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
-<li><code>string</code> - stores text, such as "Hello World". String values are surrounded by double quotes</li>
-<li><code>bool</code> - stores values with two states: true or false</li>
-</ul>
+			<ul>
+				<li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+				<li><code>double</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+				<li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+				<li><code>string</code> - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+				<li><code>bool</code> - stores values with two states: true or false</li>
+			</ul>
 
-<h1>Declaring (Creating) Variables</h1>
-<p>To create a variable, you must specify the type and assign it a value:</p>
+			<h1>Declaring (Creating) Variables</h1>
+			<p>To create a variable, you must specify the type and assign it a value:</p>
 
-<h2>Syntax</h2>
-<code>type variable = value;</code>
-<p>Where <em>type</em> is one of C++ types (such as <code>int</code>), and <em>variable</em> is the name of the variable (such as <strong>x</strong> or <strong>myName</strong>). The equal sign is used to assign values to the variable.<p>
+			<h2>Syntax</h2>
+			<div class="divcode"> <code>type variable = value;</code></div>
+			<p>Where <em>type</em> is one of C++ types (such as <code>int</code>), and <em>variable</em> is the name of the variable (such as <strong>x</strong> or <strong>myName</strong>). The equal sign is used to assign values to the variable.</p>
 
-<p>To create a variable that should store a number, look at the following example:<p>
+			<p>To create a variable that should store a number, look at the following example:</p>
 
-<h2>Example</h2>
-<p>Create a variable called myNum of type int and assign it the value 15:</p>
+			<h2>Example</h2>
+			<p>Create a variable called myNum of type int and assign it the value 15:</p>
 
-<code>int myNum = 15;
-cout << myNum;</code>
-<p>You can also declare a variable without assigning the value, and assign the value later:</p>
+			<div class="divcode"><code>int myNum = 15;
+					cout << myNum;</code>
+			</div>
+			<p>You can also declare a variable without assigning the value, and assign the value later:</p>
 
-<h2>Example</h2>
-<code>int myNum;
-myNum = 15;
-cout << myNum;</code>
-<p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+			<h2>Example</h2>
+			<div class="divcode"><code>int myNum;
+					myNum = 15;
+					cout << myNum;</code>
+			</div>
+			<p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
 
-<h2>Example</h2>
-<code>int myNum = 15;  // myNum is 15
-myNum = 10;  // Now myNum is 10
-cout << myNum;  // Outputs 10</code>
+			<h2>Example</h2>
+			<div class="divcode"><code>int myNum = 15; // myNum is 15
+					myNum = 10; // Now myNum is 10
+					cout << myNum; // Outputs 10</code>
+			</div>
 
-<h1>Other Types</h1>
-<p>A demonstration of other data types:</p>
+			<h1>Other Types</h1>
+			<p>A demonstration of other data types:</p>
 
-<h2>Example</h2>
-<code>int myNum = 5;               // Integer (whole number without decimals)
-double myFloatNum = 5.99;    // Floating point number (with decimals)
-char myLetter = 'D';         // Character
-string myText = "Hello";     // String (text)
-bool myBoolean = true;       // Boolean (true or false)</code>
+			<h2>Example</h2>
+			<div class="divcode"><code>int myNum = 5; // Integer (whole number without decimals)
+					double myFloatNum = 5.99; // Floating point number (with decimals)
+					char myLetter = 'D'; // Character
+					string myText = "Hello"; // String (text)
+					bool myBoolean = true; // Boolean (true or false)</code></div>
 
 		</section>
 
 		<section class="main-section" id="User_Input">
 			<header>User Input</header>
-			<p>You have already learned that cout is used to output (print) values. Now we will use <code>cin</code> to get user input. <code>cin</code> is a predefined variable that reads data from the keyboard with the extraction operator <code>(>>)</code>. </p>
+			<p>You have already learned that cout is used to output (print) values. Now we will use <code>cin</code> to get user input. <code>cin</code> is a predefined variable that reads data from the keyboard with the extraction operator
+				<code>(>>)</code>. </p>
 
-<p>In the following example, the user can input a number, which is stored in the variable x. Then we print the value of x:</p>
+			<p>In the following example, the user can input a number, which is stored in the variable x. Then we print the value of x:</p>
 
-<h2>Example</h2>
-<code>int x;
-cout << "Type a number: "; // Type a number and press enter
-cin >> x; // Get user input from the keyboard
-cout << "Your number is: " << x; // Display the input value</code>
+			<h2>Example</h2>
+			<div class="divcode"><code>int x;
+					cout << "Type a number: " ; // Type a number and press enter cin>> x; // Get user input from the keyboard
+						cout << "Your number is: " << x; // Display the input value</code>
+			</div>
 		</section>
 
 		<section class="main-section" id="Data_Types">
 			<header>Data Types</header>
-				<p>As explained in the Variables chapter, a variable in C++ must be a specified data type:</p>
-				<ul>
+			<p>As explained in the Variables chapter, a variable in C++ must be a specified data type:</p>
+			<ul>
 				<li>Use int when you need to store a whole number without decimals, like 35 or 1000, and float or double when you need a floating point number (with decimals), like 9.99 or 3.14515.</li>
 				<li>A boolean data type is declared with the bool keyword and can only take the values true or false. When the value is returned, true = 1 and false = 0.</li>
 				<li>The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':</li>
 				<li>The string type is used to store a sequence of characters (text). This is not a built-in type, but it behaves like one in its most basic usage. String values must be surrounded by double quotes</li>
-				</ul>
+			</ul>
 
 		</section>
 
@@ -175,80 +180,67 @@ cout << "Your number is: " << x; // Display the input value</code>
 		<section class="main-section" id="Conditions">
 			<header>Conditions</header>
 			<h1>Conditions and if Statements</h1>
-<p>C++ supports the usual logical conditions from mathematics:</p>
-<ul>
-<li>Less than: a < b </li>
-<li>Less than or equal to: a <= b</li>
-<li>Greater than: a > b</li>
-<li>Greater than or equal to: a >= b</li>
-<li>Equal to a == b</li>
-<li>Not equal to: a != b</li>
-</ul>
-<p>You can use these conditions to perform different actions for different decisions.</p>
+			<p>C++ supports the usual logical conditions from mathematics:</p>
+			<ul>
+				<li>Less than: a < b </li>
+				<li>Less than or equal to: a <= b</li>
+				<li>Greater than: a > b</li>
+				<li>Greater than or equal to: a >= b</li>
+				<li>Equal to a == b</li>
+				<li>Not equal to: a != b</li>
+			</ul>
+			<p>You can use these conditions to perform different actions for different decisions.</p>
 
-<p>C++ has the following conditional statements:</p>
+			<p>C++ has the following conditional statements:</p>
 
-<li>Use <code>else</code> to specify a block of code to be executed, if the same condition is false</li>
-<li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true</li>
-<li>Use <code>else if</code> to specify a new condition to test, if the first condition is false</li>
-<li>Use <code>switch</code> to specify many alternative blocks of code to be executed</li>
+			<li>Use <code>else</code> to specify a block of code to be executed, if the same condition is false</li>
+			<li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true</li>
+			<li>Use <code>else if</code> to specify a new condition to test, if the first condition is false</li>
+			<li>Use <code>switch</code> to specify many alternative blocks of code to be executed</li>
 
-<h1>The if Statement</h1>
-Use the if statement to specify a block of C++ code to be executed if a condition is true.
+			<h1>The if Statement</h1>
+		<p>	Use the if statement to specify a block of C++ code to be executed if a condition is true.</p>
 
-<h2>Syntax</h2>
-<code>if (condition) {
-// block of code to be executed if the condition is true
-}</code>
-<h1>The else Statement</h1>
-<p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
-<h2>Example</h2>
-<code>int time = 20;
-if (time < 18) {
-  cout << "Good day.";
-} else {
-  cout << "Good evening.";
-}
-// Outputs "Good evening."</code>
+			<h2>Syntax</h2>
+			<div class="divcode"><code>if (condition) {
+					// block of code to be executed if the condition is true
+					}</code></div>
+			<h1>The else Statement</h1>
+			<p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+			<h2>Example</h2>
+			<div class="divcode"><code>int time = 20;
+					if (time < 18) { cout << "Good day." ; } else { cout << "Good evening." ; } // Outputs "Good evening." </code>
+			</div>
 
-<h1>The else if Statement</h1>
-<p>Use the else if statement to specify a new condition if the first condition is false.</p>
-<h2>Example</h2>
-<code>int time = 22;
-if (time < 10) {
-  cout << "Good morning.";
-} else if (time < 20) {
-  cout << "Good day.";
-} else {
-  cout << "Good evening.";
-}
-// Outputs "Good evening."
-</code>
+			<h1>The else if Statement</h1>
+			<p>Use the else if statement to specify a new condition if the first condition is false.</p>
+			<h2>Example</h2>
+			<div class="divcode"><code>int time = 22;
+					if (time < 10) { cout << "Good morning." ; } else if (time < 20) { cout << "Good day." ; } else { cout << "Good evening." ; } // Outputs "Good evening." </code>
+			</div>
 
 		</section>
 
 		<section class="main-section" id="For_Loop">
 			<header>For Loop</header>
 
-<p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+			<p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
 
-<h2>Syntax</h2>
-<code>for (statement 1; statement 2; statement 3) {
-  // code block to be executed
-}</code>
-<p>Statement 1 is executed (one time) before the execution of the code block.</p>
+			<h2>Syntax</h2>
+			<div class="divcode"><code>for (statement 1; statement 2; statement 3) {
+					// code block to be executed
+					}</code></div>
+			<p>Statement 1 is executed (one time) before the execution of the code block.</p>
 
-<p>Statement 2 defines the condition for executing the code block.</p>
+			<p>Statement 2 defines the condition for executing the code block.</p>
 
-<p>Statement 3 is executed (every time) after the code block has been executed.</p>
+			<p>Statement 3 is executed (every time) after the code block has been executed.</p>
 
-<p>The example below will print the numbers 0 to 4: </p>
+			<p>The example below will print the numbers 0 to 4: </p>
 
-<h2>Example</h2>
-<code> for (int i = 0; i < 5; i++) {
-  cout << i << "\n";
-}
-</code>
+			<h2>Example</h2>
+			<div class="divcode"><code> for (int i = 0; i < 5; i++) { cout << i << "\n" ; } </code>
+			</div>
 
 		</section>
 

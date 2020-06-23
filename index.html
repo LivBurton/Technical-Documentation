@@ -83,16 +83,14 @@
 			<h2 id="First_Program">myfirstprogram.cpp</h2>
 
 			<div class="divcode"><code>#include &ltiostream&gt
-					using namespace std;
-					int main() {
-					cout << "Hello World!" ; return 0; }</code>
+using namespace std;
+int main() {
+  cout << "Hello World!" ;
+  return 0;
+}</code>
 			</div>
 
-			<p>Then, go to <strong>Build > Build and Run</strong> to run (execute) the program. The result will look something to this:</p>
-			<div class="divcode">
-				<code>Hello World!
-					Process returned 0 (0x0) execution time : 0.011 s
-					Press any key to continue.</code></div>
+			<p>Then, go to <strong>Build > Build and Run</strong> to run (execute) the program. </p>
 			<p>Congratulations! You have now written and executed your first C++ program.</p>
 
 		</section>
@@ -121,21 +119,21 @@
 			<p>Create a variable called myNum of type int and assign it the value 15:</p>
 
 			<div class="divcode"><code>int myNum = 15;
-					cout << myNum;</code>
+cout << myNum;</code>
 			</div>
 			<p>You can also declare a variable without assigning the value, and assign the value later:</p>
 
 			<h2>Example</h2>
 			<div class="divcode"><code>int myNum;
-					myNum = 15;
-					cout << myNum;</code>
+myNum = 15;
+cout << myNum;</code>
 			</div>
 			<p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
 
 			<h2>Example</h2>
 			<div class="divcode"><code>int myNum = 15; // myNum is 15
-					myNum = 10; // Now myNum is 10
-					cout << myNum; // Outputs 10</code>
+myNum = 10; // Now myNum is 10
+cout << myNum; // Outputs 10</code>
 			</div>
 
 			<h1>Other Types</h1>
@@ -143,10 +141,10 @@
 
 			<h2>Example</h2>
 			<div class="divcode"><code>int myNum = 5; // Integer (whole number without decimals)
-					double myFloatNum = 5.99; // Floating point number (with decimals)
-					char myLetter = 'D'; // Character
-					string myText = "Hello"; // String (text)
-					bool myBoolean = true; // Boolean (true or false)</code></div>
+double myFloatNum = 5.99; // Floating point number (with decimals)
+char myLetter = 'D'; // Character
+string myText = "Hello"; // String (text)
+bool myBoolean = true; // Boolean (true or false)</code></div>
 
 		</section>
 
@@ -159,8 +157,9 @@
 
 			<h2>Example</h2>
 			<div class="divcode"><code>int x;
-					cout << "Type a number: " ; // Type a number and press enter cin>> x; // Get user input from the keyboard
-						cout << "Your number is: " << x; // Display the input value</code>
+cout << "Type a number: " ; // Type a number and press enter
+cin>> x; // Get user input from the keyboard
+cout << "Your number is: " << x; // Display the input value</code>
 			</div>
 		</section>
 
@@ -203,20 +202,31 @@
 
 			<h2>Syntax</h2>
 			<div class="divcode"><code>if (condition) {
-					// block of code to be executed if the condition is true
-					}</code></div>
+  // block of code to be executed if the condition is true
+}</code></div>
 			<h1>The else Statement</h1>
 			<p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
 			<h2>Example</h2>
 			<div class="divcode"><code>int time = 20;
-					if (time < 18) { cout << "Good day." ; } else { cout << "Good evening." ; } // Outputs "Good evening." </code>
+if (time < 18) {
+  cout << "Good day." ;
+} else {
+  cout << "Good evening." ;
+}
+// Outputs "Good evening." </code>
 			</div>
 
 			<h1>The else if Statement</h1>
 			<p>Use the else if statement to specify a new condition if the first condition is false.</p>
 			<h2>Example</h2>
 			<div class="divcode"><code>int time = 22;
-					if (time < 10) { cout << "Good morning." ; } else if (time < 20) { cout << "Good day." ; } else { cout << "Good evening." ; } // Outputs "Good evening." </code>
+if (time < 10) {
+  cout << "Good morning." ;
+} else if (time < 20) {
+  cout << "Good day." ;
+} else {
+  cout << "Good evening." ;
+} // Outputs "Good evening." </code>
 			</div>
 
 		</section>
@@ -228,8 +238,8 @@
 
 			<h2>Syntax</h2>
 			<div class="divcode"><code>for (statement 1; statement 2; statement 3) {
-					// code block to be executed
-					}</code></div>
+  // code block to be executed
+}</code></div>
 			<p>Statement 1 is executed (one time) before the execution of the code block.</p>
 
 			<p>Statement 2 defines the condition for executing the code block.</p>
@@ -239,7 +249,9 @@
 			<p>The example below will print the numbers 0 to 4: </p>
 
 			<h2>Example</h2>
-			<div class="divcode"><code> for (int i = 0; i < 5; i++) { cout << i << "\n" ; } </code>
+			<div class="divcode"><code> for (int i = 0; i < 5; i++) {
+  cout << i << "\n" ;
+} </code>
 			</div>
 
 		</section>
